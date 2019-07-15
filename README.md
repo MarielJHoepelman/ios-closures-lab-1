@@ -97,6 +97,17 @@ b. Use `sortedBy` to sort `cities` alphabetical order of the second character of
 
 c. Use `sortedBy` to sort `cities` in order of the length of the city name.
 
+```swift
+let citiesSorted = cities.sorted {$0 < $1}
+print(citiesSorted)
+
+let citiesSorted2 = cities.sorted {$0.dropFirst() < $1.dropFirst()}
+print(citiesSorted2)
+
+
+let citiesSorted3 = cities.sorted {$0.count < $1.count}
+print(citiesSorted3)
+```
 
 ## Question 6
 

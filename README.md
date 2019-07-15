@@ -56,6 +56,13 @@ Input: `let numbers = [4, 7, 1, 9, 6, 5, 6, 9]`
 
 Output: `9`
 
+```swift
+let largest = numbers.reduce(0, {x, y in
+    return x > y ? x : y
+})
+print(largest)
+```
+
 
 ## Question 4
 

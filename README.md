@@ -46,6 +46,13 @@ Input: `let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]`
 
 Expected values: `multiples = [3, 6, 9, 3, 12]`
 
+```swift
+let multiplesOfNumbers = numbers.filter {  (a) -> Bool in
+    return a % 3 == 0
+}
+print(multiplesOfNumbers)
+```
+
 
 ## Question 3
 

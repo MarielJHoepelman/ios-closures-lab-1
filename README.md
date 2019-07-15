@@ -25,6 +25,15 @@ Hello Closures!
 Hello Closures!
 ```
 
+```swift
+func applyKTimes(_ K: Int, _ closure: () -> ()) {
+    for _ in 0..<K {
+    closure ()
+    }
+}
+applyKTimes(3, { print("Hello Closures!") })
+```
+
 
 ## Question 2
 

@@ -80,6 +80,12 @@ Input: `let strings = ["We", "Heart", "Swift"]`
 
 Output: `"We Heart Swift"`
 
+```swift
+
+let reducedStrings = strings.reduce("", { $0 + " " + $1 })
+print(reducedStrings)
+```
+
 
 ## Question 5
 

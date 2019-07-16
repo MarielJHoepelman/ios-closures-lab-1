@@ -115,7 +115,19 @@ print(citiesSorted3)
 
 a. Use `sortedBy` to sort `citiesWithPopulation` in ascending order of population.
 
+```swift
+
+let sortedByPopulation = citiesWithPopulation.sorted (by: { (a,b) in (a.1) > (b.1) } )
+print(sortedByPopulation)
+
+
+let sortedByLast = citiesWithPopulation.sorted (by: { (a,b) in a.0.last! < b.0.last! } )
+print(sortedByLast)
+```
+
 b. Use `sortedBy` to sort `citiesWithPopulation` in reverse alphabetical order of the last character in the city name.
+
+
 
 
 ## Question 7

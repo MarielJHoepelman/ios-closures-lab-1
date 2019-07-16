@@ -208,6 +208,16 @@ Output:
 16
 ```
 
+```swift
+let array = [1, 2, 3, 4]
+func forEach(array: [Int], _ closure: (Int) -> ()) {
+    for n in array {
+        closure(n)
+    }
+}
+forEach(array: array, {print($0 * $0)} )
+```
+
 ## Question 10
 
 Implement a function `combineArrays` that takes 2 arrays and a closure that combines 2 Ints into a single Int. The function combines the two arrays into a single array using the provided closure. Assume that the 2 arrays have equal length.

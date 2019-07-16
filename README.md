@@ -235,6 +235,18 @@ combineArrays(array1,array2) {
 
 Output: `[5,10,15,12]`
 
+```swift
+func combinedArrays(a: [Int], b: [Int], _ closure: (Int, Int) -> Int) -> [Int] {
+    var multiplication: [Int] = []
+    for i in 0..<a.count {
+        multiplication.append(closure(a[i],b[i]))
+    }
+    return multiplication
+}
+
+print(combinedArrays(a: array1, b: array2, { $0 + $1}))
+```
+
 
 ## Question 11
 

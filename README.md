@@ -244,7 +244,7 @@ func combinedArrays(a: [Int], b: [Int], _ closure: (Int, Int) -> Int) -> [Int] {
     return multiplication
 }
 
-print(combinedArrays(a: array1, b: array2, { $0 + $1}))
+print(combinedArrays(a: array1, b: array2, { $0 * $1}))
 ```
 
 

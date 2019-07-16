@@ -119,13 +119,14 @@ a. Use `sortedBy` to sort `citiesWithPopulation` in ascending order of populatio
 
 let sortedByPopulation = citiesWithPopulation.sorted (by: { (a,b) in (a.1) > (b.1) } )
 print(sortedByPopulation)
-
-
-let sortedByLast = citiesWithPopulation.sorted (by: { (a,b) in a.0.last! < b.0.last! } )
-print(sortedByLast)
 ```
 
 b. Use `sortedBy` to sort `citiesWithPopulation` in reverse alphabetical order of the last character in the city name.
+
+```swift
+let sortedByLast = citiesWithPopulation.sorted (by: { (a,b) in a.0.last! < b.0.last! } )
+print(sortedByLast)
+```
 
 
 
@@ -159,10 +160,21 @@ Find the sum of the squares of all the odd numbers from `numbers` and then print
 `var numbers = [1, 2, 3, 4, 5, 6]`
 
 a. Write code that removes all the odd numbers from the array.
+```swift
+let removesOddNumbers = numbers.filter { (a) -> Bool in
+return a % 2 == 0
+}
+```
 
 b. Write code that squares all the numbers in the array.
+```swift
+let squareNumbers = numbers.map { (n) -> Int in Int(pow(Double(n), Double(2)))}
+````
 
 c. Write code that finds the sum of the array.
+```swift
+let sumNumbers = numbers.reduce(0, +)
+```
 
 d. Now use `map`, `filter` and `reduce` to solve this problem.
 
@@ -170,8 +182,10 @@ Example:
 Input: `var numbers = [1, 2, 3, 4, 5, 6]`
 
 Output: `35 // 1 + 9 + 25 -> 35`
-
-
+```swift
+let squareAndSumOdds = numbers.filter({(a) -> Bool in a % 2 != 0}).map{(n) -> Int in Int(pow(Double(n), Double(2)))}.reduce(0, +)
+print(squareAndSumOdds)
+```
 ## Question 9
 
 Implement a function `forEach(array: [Int], _ closure: Int -> ())` that takes an array of integers and a closure and runs the closure for each element of the array.
